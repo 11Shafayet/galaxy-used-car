@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blink_animation {
+  animation: blink_animation 2.5s linear infinite;
+}
+
+@keyframes blink_animation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
