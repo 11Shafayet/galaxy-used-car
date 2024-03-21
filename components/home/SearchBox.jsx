@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Select, { StylesConfig } from 'react-select';
+import Select from 'react-select';
 
 const makeList = [
   {
