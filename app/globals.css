@@ -35,3 +35,11 @@ input[type='checkbox'] {
 .price-track-2 {
   background: blue !important;
 }
+.search-emoji {
+  display: none !important;
+}
+.country-list .search-box {
+  width: 90% !important;
+  padding: 10px !important;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.05) !important;
+}

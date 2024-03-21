@@ -281,7 +281,6 @@ const Sidebar = () => {
                   Reset
                 </button>
               </div>
-
               <ReactSlider
                 className="price-slider w-full h-1 bg-primary mt-4 rounded-full"
                 thumbClassName="price-thumb w-4 h-4 bg-gray-300 rounded-full -mt-[6px] focus:outline-none focus:bg-primary"
