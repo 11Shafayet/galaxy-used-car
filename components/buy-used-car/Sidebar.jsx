@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import Select from 'react-select';
+import ReactSlider from 'react-slider';
 
 const makeOptions = [
   { label: 'Chevrolet' },
@@ -20,6 +21,7 @@ const Sidebar = () => {
   const [cylinderSearch, setCylinderSearch] = useState('');
   const [fromYear, setFromYear] = useState('');
   const [toYear, setToYear] = useState('');
+  const [priceRange, setPriceRange] = useState([0, 200]);
 
   const toggleFilter = (index) => {
     setActiveFilter((prev) => (prev === index ? null : index));
@@ -251,6 +253,43 @@ const Sidebar = () => {
                     </label>
                   ))}
               </div>
+            </div>
+          )}
+        </div>
+        <hr />
+        {/* price */}
+        <div>
+          <div
+            className="flex justify-between items-center font-medium cursor-pointer"
+            onClick={() => toggleFilter(4)}
+          >
+            <p>Price</p>
+            <div className="border rounded-md border-[#90A3BF] p-2">
+              {activeFilter !== 4 ? <FaPlus /> : <FaMinus />}
+            </div>
+          </div>
+
+          {/* filter options */}
+          {activeFilter === 4 && (
+            <div className="mt-3">
+              {/* reset button */}
+              <div className="flex justify-between">
+                <h5 className="fontmedium">
+                  ${priceRange[0]} - ${priceRange[1]}
+                </h5>
+                <button className="text-sm bg-danger rounded-md px-4 py-1.5 text-white">
+                  Reset
+                </button>
+              </div>
+
+              <ReactSlider
+                className="price-slider w-full h-1 bg-primary mt-4 rounded-full"
+                thumbClassName="price-thumb w-4 h-4 bg-gray-300 rounded-full -mt-[6px] focus:outline-none focus:bg-primary"
+                trackClassName="price-track"
+                minDistance={10}
+                value={priceRange}
+                onChange={setPriceRange}
+              />
             </div>
           )}
         </div>

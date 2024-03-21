@@ -30,3 +30,8 @@
 input[type='checkbox'] {
   accent-color: var(--primary-color);
 }
+
+.price-track-0,
+.price-track-2 {
+  background: blue !important;
+}
