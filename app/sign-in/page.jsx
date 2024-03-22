@@ -14,7 +14,7 @@ const SignIn = () => {
   return (
     <section className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="py-20 px-12 min-h-[80vh] flex justify-center items-center">
+        <div className="py-20 px-12 min-h-[80vh] flex justify-center items-center bg-primary bg-opacity-10">
           <form className="flex-grow flex flex-col gap-y-3 max-w-[450px]">
             <h3 className="font-bold text-4xl md:text-5xl mb-6">Sign In</h3>
             {/* username */}
@@ -48,24 +48,23 @@ const SignIn = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="bg-white border rounded-md py-2.5 px-4 focus:outline-primary"
               />
-
-              <p className="underline text-end text-sm">
-                Forget your password?
-              </p>
             </div>
 
             {/* button */}
             <div>
-              <button className="py-3 px-28 bg-primary font-medium rounded-full text-white capitalize mt-2 hover:bg-opacity-95">
+              <button className="py-3  bg-primary font-medium rounded-full text-white capitalize mt-2 hover:bg-opacity-95 w-full">
                 Sign in
               </button>
             </div>
-            <p className="text-sm">
-              Don't have an account?{' '}
-              <Link href="/sign-up" className="underline hover:text-primary">
-                Sign Up
-              </Link>
-            </p>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2 mt-4">
+              <p className="text-sm flex justify-end gap-x-2">
+                Don't have an account?{' '}
+                <Link href="/sign-up" className="underline hover:text-primary">
+                  Sign Up
+                </Link>
+              </p>
+              <p className="underline text-end text-sm">Forget password?</p>
+            </div>
           </form>
         </div>
         <div className="hidden lg:block">

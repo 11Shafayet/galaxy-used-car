@@ -33,8 +33,8 @@ const SignUp = () => {
           />
         </div>
 
-        <div className="py-20 px-12 min-h-[80vh] flex justify-center items-center">
-          <form className="flex-grow flex flex-col gap-y-3 max-w-[450px] -ml-36">
+        <div className="py-20 px-12 min-h-[80vh] flex justify-center items-center bg-primary bg-opacity-10">
+          <form className="flex-grow flex flex-col gap-y-3 max-w-[450px]">
             <h3 className="font-bold text-4xl md:text-5xl mb-6">Sign Up</h3>
             {/* username */}
             <div className="flex flex-col gap-2">
@@ -101,7 +101,7 @@ const SignUp = () => {
               />
             </div>
             {/* phone */}
-            <div className="my-4">
+            <div>
               <label htmlFor="phone">Phone Number</label>
               <PhoneInput
                 required
@@ -113,7 +113,6 @@ const SignUp = () => {
                 onChange={(e, dialCode) => handlePhone(e, dialCode)}
                 className="!w-full"
                 inputClass="!w-full !py-5 !border-gray-200 focus:!border-primary"
-               
               />
             </div>
 
@@ -123,8 +122,8 @@ const SignUp = () => {
                 Sign Up
               </button>
             </div>
-            <p className="text-sm">
-              Already have an account?{' '}
+            <p className="text-sm mt-4 flex justify-end gap-x-2">
+              Already have an account?
               <Link href="/sign-in" className="underline hover:text-primary">
                 Sign In
               </Link>

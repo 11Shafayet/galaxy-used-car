@@ -110,7 +110,7 @@ const DetailsContainer = () => {
 
   return (
     <div>
-      <h4 className="text-3xl font-medium leading-snug">
+      <h4 className="text-2xl md:text-3xl font-medium leading-snug mb-6">
         MITSUBISHI XPANDER HI-LINE 1.5L HI A/T PTR [EXPORT ONLY] [DA] 1.5L HI
         A/T PTR
       </h4>
