@@ -41,7 +41,9 @@ const Navbar = () => {
         <div className="container px-4 mx-auto">
           <div className="flex justify-between items-center gap-x-4">
             {/* logo */}
-            <Image src={logo} alt="logo" className="max-w-[220px] h-auto" />
+            <Link href={`/`}>
+              <Image src={logo} alt="logo" className="max-w-[220px] h-auto" />
+            </Link>
 
             {/* links */}
             <div className="hidden md:flex items-center gap-x-4">

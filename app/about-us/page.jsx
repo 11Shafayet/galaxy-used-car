@@ -4,6 +4,17 @@ import aboutLogo from '/public/assets/about-logo.png';
 import about1 from '/public/assets/about1.png';
 import about2 from '/public/assets/about2.png';
 import about3 from '/public/assets/about3.png';
+import PopularBrands from '@/components/home/PopularBrands';
+import { FaCheck } from 'react-icons/fa';
+
+const values = [
+  'Integrity',
+  'Accountability',
+  'Gratitude',
+  'Communication',
+  'Enthusiasm',
+  'Teamwork',
+];
 
 const AboutUs = () => {
   return (
@@ -23,7 +34,7 @@ const AboutUs = () => {
         </div>
       </header>
 
-      <div className="py-16 md:py-20">
+      <div className="pt-16 md:pt-20">
         <div className="container px-4 mx-auto">
           <div className="flex justify-center items-center">
             <Image
@@ -108,6 +119,26 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+        {/* core values */}
+        <div className="bg-primary bg-opacity-10 py-12 md:py-20">
+          <div className="container px-4 mx-auto">
+            <h5 className="text-3xl md:text-5xl font-bold text-center">
+              Core Values
+            </h5>
+            <div className="flex flex-wrap justify-between items-center gap-y-3 max-w-[420px] mx-auto mt-8 md:pl-8">
+              {values.map((item, i) => (
+                <div className="flex items-center gap-x-2 w-1/2" key={i}>
+                  <div className="flex justify-center items-center w-5 h-5 rounded-full bg-primary text-white text-sm">
+                    <FaCheck />
+                  </div>
+                  <p className="font-bold">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* trusted companies */}
+        <PopularBrands />
       </div>
     </section>
   );

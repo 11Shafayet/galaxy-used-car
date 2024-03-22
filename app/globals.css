@@ -70,3 +70,16 @@ input[type='checkbox'] {
   font-size: 15px !important;
   font-weight: 900 !important;
 }
+
+/* accordion */
+.accordion {
+  border: none !important;
+}
+.accordion__button {
+  background-color: transparent !important;
+  font-weight: 500;
+  color: #90acd2 !important;
+}
+.accordion__button:before {
+  display: none !important;
+}

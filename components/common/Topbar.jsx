@@ -50,10 +50,13 @@ const Topbar = () => {
             </div>
 
             <div className="flex items-center text-sm leading-none">
-              <Link href="" className="pr-3 border-r hover:text-primary">
+              <Link
+                href="/sign-in"
+                className="pr-3 border-r hover:text-primary"
+              >
                 Login
               </Link>
-              <Link href="" className="pl-3 hover:text-primary">
+              <Link href="sign-up" className="pl-3 hover:text-primary">
                 Register
               </Link>
             </div>

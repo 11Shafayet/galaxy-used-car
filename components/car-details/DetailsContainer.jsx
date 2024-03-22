@@ -19,23 +19,24 @@ import 'swiper/css/thumbs';
 
 // images
 import banner1 from '/public/assets/car-details-banner.png';
-import thumb1 from '/public/assets/thumb1.png';
+import car7 from '/public/assets/car7.jpeg';
+import car8 from '/public/assets/car8.jpeg';
 import dummycar from '/public/assets/dummy-car.png';
 import Image from 'next/image';
 
 const carImageList = [
   banner1,
   dummycar,
+  car7,
+  car8,
   banner1,
   dummycar,
+  car7,
+  car8,
   banner1,
   dummycar,
-  banner1,
-  dummycar,
-  banner1,
-  thumb1,
-  banner1,
-  thumb1,
+  car7,
+  car8,
 ];
 
 const additionalDetails = [
@@ -121,16 +122,19 @@ const DetailsContainer = () => {
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2 h-[330px] md:h-[500px] xl:h-[600px] mb-4 rounded-xl overflow-hidden"
+        className="mySwiper2 h-[330px] md:h-[500px] xl:h-[600px] mb-4 rounded-xl overflow-hidden bg-primary bg-opacity-10 !flex !justify-center !items-center"
       >
         {carImageList.map((item, i) => (
-          <SwiperSlide className="overflow-hidden rounded-xl" key={i}>
+          <SwiperSlide
+            className="overflow-hidden rounded-xl !flex !justify-center !items-center"
+            key={i}
+          >
             <Image
               src={item}
               alt="car"
               width={400}
               height={400}
-              className="min-w-full rounded-xl h-full max-h-[330px] md:max-h-[500px] xl:max-h-[600px] object-cover"
+              className="rounded-xl h-full w-auto max-w-full object-cover"
             />
           </SwiperSlide>
         ))}
@@ -171,11 +175,12 @@ const DetailsContainer = () => {
               alt="car"
               width={400}
               height={400}
-              className="min-w-full min-h-[100px] object-cover rounded-xl"
+              className="min-w-full h-[100px] object-cover rounded-xl"
             />
           </SwiperSlide>
         ))}
       </Swiper>
+
       {/* features */}
       <div className="mt-12">
         <h5 className="text-2xl font-semibold">Features</h5>

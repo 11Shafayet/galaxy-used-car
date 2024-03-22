@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import signIn from '/public/assets/signIn.png';
+import signIn from '/public/assets/car6.jpg';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -71,7 +71,7 @@ const SignIn = () => {
           <Image
             src={signIn}
             alt="car"
-            className="object-cover max-w-full h-auto w-full max-h-[800px]"
+            className="object-cover max-w-full h-auto w-full max-h-[90vh]"
           />
         </div>
       </div>
