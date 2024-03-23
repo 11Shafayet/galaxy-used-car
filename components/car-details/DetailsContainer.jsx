@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaRegStar } from 'react-icons/fa';
+import { FaHeart, FaRegStar } from 'react-icons/fa';
 import { SlCalender } from 'react-icons/sl';
 import { IoSpeedometerOutline } from 'react-icons/io5';
 import { PiGlobeHemisphereWest } from 'react-icons/pi';
@@ -116,29 +116,34 @@ const DetailsContainer = () => {
         A/T PTR
       </h4>
       {/* images */}
-      <Swiper
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2 h-[330px] md:h-[500px] xl:h-[600px] mb-4 rounded-xl overflow-hidden bg-primary bg-opacity-10 !flex !justify-center !items-center"
-      >
-        {carImageList.map((item, i) => (
-          <SwiperSlide
-            className="overflow-hidden rounded-xl !flex !justify-center !items-center"
-            key={i}
-          >
-            <Image
-              src={item}
-              alt="car"
-              width={400}
-              height={400}
-              className="rounded-xl h-full w-auto max-w-full object-cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div>
+        <Swiper
+          loop={true}
+          spaceBetween={10}
+          navigation={true}
+          thumbs={{ swiper: thumbsSwiper }}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="relative mySwiper2 h-[330px] md:h-[500px] xl:h-[600px] mb-4 rounded-xl overflow-hidden bg-primary bg-opacity-10 !flex !justify-center !items-center"
+        >
+          <div className="absolute top-3 right-3 flex justify-center items-center gap-x-2 border rounded-md py-2 px-3.5 text-sm bg-white text-black z-[100] cursor-pointer hover:bg-primary hover:text-white duration-300">
+            <FaHeart /> <p>Favourite</p>
+          </div>
+          {carImageList.map((item, i) => (
+            <SwiperSlide
+              className="overflow-hidden rounded-xl !flex !justify-center !items-center"
+              key={i}
+            >
+              <Image
+                src={item}
+                alt="car"
+                width={400}
+                height={400}
+                className="rounded-xl h-full w-auto max-w-full object-cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>{' '}
+      </div>
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
