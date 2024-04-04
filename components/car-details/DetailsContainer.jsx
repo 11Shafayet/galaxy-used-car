@@ -145,7 +145,7 @@ const DetailsContainer = () => {
                 alt="car"
                 width={400}
                 height={400}
-                className={`rounded-xl h-full w-auto max-w-full object-cover ${
+                className={`rounded-xl h-full max-w-full object-cover ${
                   item.height > item.width ? 'w-auto' : 'w-full'
                 }`}
               />
