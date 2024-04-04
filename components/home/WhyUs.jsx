@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import tire1 from '/public/assets/tire1.png';
-import tire2 from '/public/assets/tire2.png';
 import purchase from '/public/assets/purchase.png';
 import heart from '/public/assets/heart.png';
 import smiley from '/public/assets/smiley.png';
@@ -29,12 +28,12 @@ const WhyUs = () => {
       <Image
         src={tire1}
         alt="tire"
-        className="max-w-full h-auto absolute -top-[85px] left-0 text-[#22BC7C] -z-10 opacity-30"
+        className="max-w-full h-auto absolute -top-[100px] -left-[100px] text-[#22BC7C] -z-10 opacity-30 rotation_clockwise"
       />
       <Image
-        src={tire2}
+        src={tire1}
         alt="tire"
-        className="max-w-full h-auto absolute -bottom-[100px] right-0 text-[#22BC7C] -z-10 opacity-30"
+        className="max-w-full h-auto absolute -bottom-[100px] -right-[100px] text-[#22BC7C] -z-10 opacity-30  rotation_anti_clockwise"
       />
 
       <div className="container px-4 mx-auto text-white">

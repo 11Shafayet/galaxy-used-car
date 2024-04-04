@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaHeart, FaRegStar } from 'react-icons/fa';
 import { SlCalender } from 'react-icons/sl';
 import { IoSpeedometerOutline } from 'react-icons/io5';
@@ -21,7 +21,7 @@ import 'swiper/css/thumbs';
 import banner1 from '/public/assets/car-details-banner.png';
 import car7 from '/public/assets/car7.jpeg';
 import car8 from '/public/assets/car8.jpeg';
-import dummycar from '/public/assets/dummy-car.png';
+import dummycar from '/public/assets/dummy.jpg';
 import Image from 'next/image';
 
 const carImageList = [
@@ -109,6 +109,16 @@ const features = [
 const DetailsContainer = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const checkImageProp = (carImage) => {
+    const width = carImage.width;
+    const height = carImage.height;
+    console.log(width, height);
+  };
+
+  useEffect(() => {
+    checkImageProp(car8);
+  }, []);
+
   return (
     <div>
       <h4 className="text-2xl md:text-3xl font-medium leading-snug mb-6">
@@ -123,14 +133,11 @@ const DetailsContainer = () => {
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="relative mySwiper2 h-[330px] md:h-[500px] xl:h-[600px] mb-4 rounded-xl overflow-hidden bg-primary bg-opacity-10 !flex !justify-center !items-center"
+          className="relative mySwiper2 h-[330px] md:h-[500px] xl:h-[550px] mb-4 rounded-xl overflow-hidden bg-gray-400 bg-opacity-5 backdrop-blur-lg !flex !justify-center !items-center"
         >
-          <div className="absolute top-3 right-3 flex justify-center items-center gap-x-2 border rounded-md py-2 px-3.5 text-sm bg-white text-black z-[100] cursor-pointer hover:bg-primary hover:text-white duration-300">
-            <FaHeart /> <p>Favourite</p>
-          </div>
           {carImageList.map((item, i) => (
             <SwiperSlide
-              className="overflow-hidden rounded-xl !flex !justify-center !items-center"
+              className="relative overflow-hidden rounded-xl !flex !justify-center !items-center"
               key={i}
             >
               <Image
@@ -138,11 +145,16 @@ const DetailsContainer = () => {
                 alt="car"
                 width={400}
                 height={400}
-                className="rounded-xl h-full w-auto max-w-full object-cover"
+                className={`rounded-xl h-full w-auto max-w-full object-cover ${
+                  item.height > item.width ? 'w-auto' : 'w-full'
+                }`}
               />
+              <div className="absolute top-3 right-3 flex justify-center items-center gap-x-2 border rounded-md py-2 px-3.5 text-sm bg-white text-black z-[100] cursor-pointer hover:bg-primary hover:text-white duration-300">
+                <FaHeart /> <p>Favourite</p>
+              </div>
             </SwiperSlide>
           ))}
-        </Swiper>{' '}
+        </Swiper>
       </div>
       <Swiper
         onSwiper={setThumbsSwiper}

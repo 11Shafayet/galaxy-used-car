@@ -27,8 +27,8 @@ const socialItems = [
 ];
 
 const Topbar = () => {
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
-  const [userDash, setUserDash] = useState(true);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [userDash, setUserDash] = useState(false);
 
   return (
     <div className="py-3">

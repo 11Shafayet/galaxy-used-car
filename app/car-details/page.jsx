@@ -8,7 +8,7 @@ import Image from 'next/image';
 import car1 from '/public/assets/car1.png';
 import car2 from '/public/assets/car2.png';
 import car3 from '/public/assets/car3.png';
-import dummyCar from '/public/assets/dummy-car.png';
+import dummyCar from '/public/assets/dummy.jpg';
 
 import { IoMdSpeedometer } from 'react-icons/io';
 import { PiEngineBold } from 'react-icons/pi';

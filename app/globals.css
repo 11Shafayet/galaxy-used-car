@@ -83,3 +83,31 @@ input[type='checkbox'] {
 .accordion__button:before {
   display: none !important;
 }
+
+.rotation_clockwise {
+  animation: rotation_clockwise 11s infinite linear;
+  transform-origin: center center;
+}
+
+.rotation_anti_clockwise {
+  animation: rotation_anti_clockwise 11s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes rotation_clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation_anti_clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

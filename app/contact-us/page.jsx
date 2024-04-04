@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Tire from '/public/assets/contact-tire.png';
+import Tire from '/public/assets/tire1.png';
 import {
   FaDiscord,
   FaEnvelope,
@@ -52,7 +52,7 @@ const ContactUs = () => {
             <Image
               src={Tire}
               alt="tire"
-              className="-z-10 absolute -bottom-8 -right-8 max-w-full h-auto"
+              className="-z-10 absolute -bottom-28 -right-28 max-w-full h-auto rotation_clockwise opacity-30 "
             />
 
             <div>
